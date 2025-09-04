@@ -20,6 +20,93 @@
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
+/* Education Section */
+        .education-container {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .education-item {
+            background: rgba(139, 92, 246, 0.05);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .education-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(135deg, #8b5cf6, #3b82f6, #10b981);
+        }
+
+        .education-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
+            border-color: rgba(139, 92, 246, 0.4);
+        }
+
+        .education-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .education-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+        }
+
+        .education-info {
+            flex: 1;
+        }
+
+        .education-degree {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #3b82f6;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-institution {
+            font-size: 1.1rem;
+            color: #8b5cf6;
+            font-weight: 600;
+        }
+
+        .education-description {
+            color: #cbd5e1;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-top: 1rem;
+        }
+
+        .education-type {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.2);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            color: #10b981;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
 
         /* Animated background */
         .bg-animation {
@@ -554,6 +641,11 @@
             .section {
                 padding: 60px 1rem;
             }
+             .education-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
         }
 
         /* Scroll animations */
@@ -580,6 +672,7 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -618,7 +711,77 @@
             </div>
         </div>
     </section>
+<section id="education" class="section">
+        <h2 class="section-title fade-in">Education & Certifications</h2>
+        <div class="education-container">
+            
+            <!-- Bachelor's Degree -->
+            <div class="education-item fade-in">
+                <div class="education-header">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-info">
+                        <div class="education-degree">Bachelor of Computer and Artificial Intelligence</div>
+                        <div class="education-institution">Bachelor of Science in Computer Science, Specialization in Artificial Intelligence</div>
+                    </div>
+                </div>
+                <div class="education-type">Degree Program</div>
+            </div>
 
+            <!-- Generative AI Professional -->
+            <div class="education-item fade-in">
+                <div class="education-header">
+                    <div class="education-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="education-info">
+                        <div class="education-degree">Generative AI Professional</div>
+                        <div class="education-institution">Digital Egypt Pioneers Initiative (DEPI)</div>
+                    </div>
+                </div>
+                <div class="education-description">
+                    Advanced certification program focusing on generative artificial intelligence technologies, including large language models, neural networks, and AI-powered content generation systems.
+                </div>
+                <div class="education-type">Professional Certification</div>
+            </div>
+
+            <!-- MEAN Stack Development -->
+            <div class="education-item fade-in">
+                <div class="education-header">
+                    <div class="education-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="education-info">
+                        <div class="education-degree">MEAN-Stack Web Development</div>
+                        <div class="education-institution">Digital Egypt Youth (DEY) - Creativa Innovation Hubs NTI</div>
+                    </div>
+                </div>
+                <div class="education-description">
+                    Comprehensive training in full-stack web development using MongoDB, Express.js, Angular, and Node.js. Covered modern web development practices, RESTful APIs, and database management.
+                </div>
+                <div class="education-type">Web Development Program</div>
+            </div>
+
+            <!-- Full Stack Diploma -->
+            <div class="education-item fade-in">
+                <div class="education-header">
+                    <div class="education-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="education-info">
+                        <div class="education-degree">Professional Full Stack Diploma - Web Development</div>
+                        <div class="education-institution">YAT Learning Centers - Maadi</div>
+                    </div>
+                </div>
+                <div class="education-description">
+                    Professional diploma program covering both front-end and back-end development technologies, including modern frameworks, database design, and industry best practices for full-stack development.
+                </div>
+                <div class="education-type">Professional Diploma</div>
+            </div>
+
+        </div>
+    </section>
     <!-- Skills Section -->
     <section id="skills" class="section">
         <h2 class="section-title fade-in">Skills & Expertise</h2>
